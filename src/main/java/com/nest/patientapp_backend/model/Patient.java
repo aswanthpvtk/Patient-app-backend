@@ -13,6 +13,7 @@ public class Patient {
     @Id
     @GeneratedValue
     private int id;
+    private int pcode;
     private String name;
     private String address;
     private String mob;
@@ -22,8 +23,9 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(int id, String name, String address, String mob, String doctor, String date) {
+    public Patient(int id,int pcode, String name, String address, String mob, String doctor, String date) {
         this.id = id;
+        this.pcode=pcode;
         this.name = name;
         this.address = address;
         this.mob = mob;
@@ -37,6 +39,14 @@ public class Patient {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getPcode() {
+        return pcode;
+    }
+
+    public void setPcode(int pcode) {
+        this.pcode = pcode;
     }
 
     public String getName() {
